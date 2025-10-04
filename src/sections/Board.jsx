@@ -91,9 +91,10 @@ const Board = () => {
       </div>
 
       <canvas className="canvas" ref={canvasRef}
-        onMouseUp={finish}
-        onMouseDown={start}
-        onMouseMove={draw}
+        onPointerDown={finish}
+        onPointerMove={start}
+        onPointerUp={draw}
+       
       >
       </canvas>
       <button className="btn" onClick={clear}>Clear</button>
