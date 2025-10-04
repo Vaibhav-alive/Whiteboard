@@ -91,9 +91,9 @@ const Board = () => {
       </div>
 
       <canvas className="canvas" ref={canvasRef}
-        onPointerDown={finish}
-        onPointerMove={start}
-        onPointerUp={draw}
+        onPointerDown={start}
+        onPointerMove={draw}
+        onPointerUp={finish}
        
       >
       </canvas>
