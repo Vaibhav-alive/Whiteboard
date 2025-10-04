@@ -1,0 +1,136 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #242424;
+  background-color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html, body{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  padding: 12px;
+  height: 100%;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition:  .2s;
+}
+button:hover {
+  background-color: white;
+  color: #535bf2;
+  font-weight: 700;
+  box-shadow: 4px 3px 82px 1px #747bff;
+  
+  /* border-color: #646cff; */
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+.shadow{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+}
+.canvas {
+
+  background-color: #fff;
+  /* padding: 12px; */
+  border-radius: 8px;
+}
+.container{
+  width: clamp(800px, 90%, 1200px);
+  height: max(500px, 80%, 1200px);
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.colorpicker{
+  background: transparent;
+  border: none;
+}
+input[type='color']{
+  width: 80px;
+  height: 30px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+}
+.toolbox{
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  justify-content: space-evenly;
+}
+input[type="number"]{
+  width: 50px;
+  height: fit-content;
+  align-self: center;
+  padding: 4px;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  text-align: center;
+
+}
+.eraser{
+  /* border: 1px solid black; */
+  text-align: center;
+  border-radius: 12px;
+  padding: 0 4px;
+  background-color: white;
+  cursor: pointer;
+}
+.pen{
+    text-align: center;
+  border-radius: 12px;
+  padding: 0 4px;
+  background-color: white;
+  cursor: pointer;
+}
