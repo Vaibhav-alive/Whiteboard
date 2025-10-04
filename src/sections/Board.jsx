@@ -31,6 +31,8 @@ const Board = () => {
 
   useEffect(() => {
     setcanvas()
+    canvasRef.current.style.touchAction = "none";
+
   }, [])
 
   useEffect(() => {
