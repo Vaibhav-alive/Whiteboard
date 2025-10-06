@@ -76,16 +76,15 @@ button:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
 }
 .canvas {
-
   background-color: #fff;
-  /* padding: 12px; */
   border-radius: 8px;
 }
 .container{
-  width: clamp(800px, 90%, 1200px);
+  width: clamp(900px, 95%, 1200px);
   height: max(500px, 80%, 1200px);
   padding: 32px;
   display: flex;
+  align-self: center;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -96,20 +95,35 @@ button:hover {
   border: none;
 }
 input[type='color']{
-  width: 80px;
-  height: 30px;
+  width: 40px;
+  height: 25px;
   border: none;
   outline: none;
-  border-radius: 50px;
+  /* border-radius: 50px; */
 }
 .toolbox{
   display: flex;
-  width: 100%;
-  gap: 5px;
-  justify-content: space-evenly;
+  width: fit-content;
+  gap: 15px;
+  /* border: 1px solid silver; */
+  background-color: #fff;
+  justify-content: center;
+  padding: 4px 14px;
+  border-radius: 4px;
+  margin-top: 20px;
+  align-items: center;
+  transform: scale(1.2);
+}
+.toolbox > *{
+  transition: 0.2s ease-in-out;
+}
+.toolbox > *:hover{
+  transform: scale(1.2);
+  box-shadow: rgba(49, 49, 49, 0.7) 0px 2px 8px;
+
 }
 input[type="number"]{
-  width: 50px;
+  width: fit-content;
   height: fit-content;
   align-self: center;
   padding: 4px;
@@ -117,20 +131,19 @@ input[type="number"]{
   border: none;
   outline: none;
   text-align: center;
-
 }
-.eraser{
-  /* border: 1px solid black; */
+.tool-ico{
+  transition: 0.4s ease-in-out;
+  width: 24px;
   text-align: center;
-  border-radius: 12px;
-  padding: 0 4px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex-direction: column;
   background-color: white;
   cursor: pointer;
 }
-.pen{
-    text-align: center;
-  border-radius: 12px;
-  padding: 0 4px;
-  background-color: white;
-  cursor: pointer;
+.active{
+  border-bottom: 2px solid black;
 }
